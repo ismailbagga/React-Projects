@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 const followingUrl = "https://api.github.com/users/ismailbagga/following";
-const url = "https://api.github.com/users/john-smilga/followers?per_page=100";
+// const url = "https://api.github.com/users/john-smilga/followers?per_page=100";
 const paginate = (data) => {
   let numberOfAcoountInPage = 10;
   let pages = [];
@@ -15,11 +15,9 @@ const paginate = (data) => {
       pages.push(temparr);
       temparr = [];
       c++;
-      console.log("pushed");
     }
-    // c++;
   });
-  console.log(pages);
+
   return pages;
 };
 const useFetch = () => {
@@ -28,7 +26,7 @@ const useFetch = () => {
   const getData = useCallback(async () => {
     const res = await fetch(followingUrl);
     const info = await res.json();
-    console.log(info);
+
     setData(paginate(info.reverse()));
     setLoading(false);
   }, []);
