@@ -1,0 +1,147 @@
+:root {
+  --background-color-main-page: rgb(194, 194, 194);
+  --background-color-main-item: rgb(255, 255, 255);
+  --background-color-main-white: rgb(233, 233, 233);
+  --shadow-color: rgb(88, 88, 88);
+  --header-color: rgb(108, 226, 247);
+  --header-color-dark: rgb(34, 34, 141);
+  --grey-blue: #102a42;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code";
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--background-color-main-white);
+}
+p {
+  background: linear-gradient(to right, black, var(--header-color-dark));
+  background-clip: text;
+  color: transparent;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.btn {
+  width: 200px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 18px;
+  color: red;
+  border: 1px solid red;
+  background-color: transparent;
+  transition: all 1s;
+}
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+.flex-direct-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 95vw;
+  max-width: 800px;
+
+  margin-top: 25px;
+
+  padding-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.text-header {
+  color: var(--grey-blue);
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+}
+nav > .text-header {
+  color: white;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  width: 100vw;
+
+  background-color: rgb(4, 132, 172);
+}
+i {
+  position: relative;
+  font-size: 36px;
+  color: white;
+}
+.count {
+  display: flex;
+
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: -20px;
+  right: -25px;
+
+  font-size: 25px;
+  color: black;
+  width: auto;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(36, 200, 250);
+}
+.items {
+  padding-bottom: 50px;
+  border-bottom: 5px solid var(--grey-blue);
+}
+.Single-Product {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100vw;
+  padding: 10px 30px;
+  width: 95vw;
+  max-width: 800px;
+
+  background-color: var(--background-color-main-white);
+
+  margin-bottom: 20px;
+}
+.Single-Product img {
+  height: 100px;
+  width: 100px;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 90%;
+}
+.info input {
+  text-align: center;
+  width: 40px;
+  height: 30px;
+}
+.info button {
+  color: red;
+  font-size: 18px;
+}

@@ -1,0 +1,136 @@
+:root {
+  --background-color-main-page: rgb(194, 194, 194);
+  --background-color-main-item: rgb(255, 255, 255);
+  --background-color-main-white: rgb(233, 233, 233);
+  --shadow-color: rgb(88, 88, 88);
+  --header-color: rgb(108, 226, 247);
+  --hover-color: rgb(11, 142, 165);
+  --header-color-dark: rgb(34, 34, 141);
+  --grey-blue: #102a42;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code";
+  box-sizing: border-box;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+body {
+  background-color: var(--background-color-main-white);
+}
+p {
+  /* background: linear-gradient(to right, black, var(--header-color-dark));
+  background-clip: text;
+  color: transparent; */
+  margin-bottom: 8px;
+  height: 10px;
+  display: none;
+}
+.flex-direct-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  background-color: blue;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 4px dotted var(--header-color-dark);
+}
+i {
+  font-size: 18px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 90vw;
+  max-width: 800px;
+  margin: auto;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 5px 8px 10px var(--shadow-color);
+  margin-top: 4rem;
+  padding-bottom: 50px;
+}
+.btn {
+  width: 120px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: var(--header-color);
+  transition: all 1s;
+}
+.btn:hover {
+  background-color: var(--hover-color);
+}
+.text-header {
+  color: var(--grey-blue);
+  font-size: 2rem;
+  /* width: 100vw; */
+  margin: 30px auto;
+  text-align: center;
+}
+.container input {
+  height: 40px;
+  max-width: 480px;
+  width: 80vw;
+  padding-left: 20px;
+  margin-right: 10px;
+  outline: none;
+  border: 0px solid red;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: rgb(207, 207, 207);
+}
+
+.container > button {
+  color: red;
+  font-size: 18px;
+}
+.show-item-added {
+  display: block;
+  color: rgb(48, 228, 48);
+}
+.show-item-removed {
+  display: block;
+  color: rgb(228, 0, 0);
+}
+.show-empty-list,
+.show-empty-value,
+.show-item-updated {
+  display: block;
+  color: rgb(9, 86, 228);
+}
+.todoList {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  /* background-color: salmon; */
+  min-height: 100px;
+  margin-top: 30px;
+}
+.task {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: saddlebrown; */
+  font-size: 18px;
+  width: 80%;
+}
