@@ -30,6 +30,23 @@ const reducer = (state, action) => {
       total: sum,
       itemsCount: count,
     };
+  } else if (action.type === "deleteItem") {
+    let amount = 0;
+    let price = 0;
+
+    return {
+      ...state,
+      data: state.data.filter((item) => {
+        if (item.id !== action.payload) {
+          return item;
+        }
+        amount = item.amount;
+        price = item.price;
+        return null;
+      }),
+      itemsCount: state.itemsCount - amount,
+      total: state.total - amount * price,
+    };
   } else if (action.type === "clearTheCart") {
     console.log("clear the cart ");
     return { ...state, data: [], total: 0, itemsCount: 0 };

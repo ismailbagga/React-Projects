@@ -9,6 +9,9 @@ const AppProvider = ({ children }) => {
   const clearTheCart = () => {
     dispatch({ type: "clearTheCart" });
   };
+  const deleteItem = (id) => {
+    dispatch({ type: "deleteItem", payload: id });
+  };
   const [state, dispatch] = useReducer(reducer, {
     loading: true,
     data: null,
@@ -31,7 +34,9 @@ const AppProvider = ({ children }) => {
   //     dispatch({ type: "countTotal" });
   //   }, [state.data]);
   return (
-    <AppContext.Provider value={{ ...state, changeAmount, clearTheCart }}>
+    <AppContext.Provider
+      value={{ ...state, changeAmount, clearTheCart, deleteItem }}
+    >
       {children}
     </AppContext.Provider>
   );
