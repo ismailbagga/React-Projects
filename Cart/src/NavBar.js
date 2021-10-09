@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "./Context";
 const NavBar = () => {
   const { itemsCount } = useGlobalContext();
-  console.log(itemsCount);
+
   return (
     <nav>
       <h1 className="text-header">Home</h1>

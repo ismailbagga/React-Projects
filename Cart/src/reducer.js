@@ -17,7 +17,6 @@ const reducer = (state, action) => {
     return {
       ...state,
       data: state.data.map((item) => {
-        console.log("data ", count);
         if (item.id === id) {
           sum += amount * item.price;
           count += parseInt(amount);

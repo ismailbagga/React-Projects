@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import data from "./data";
 import Recipe from "./Recipe";
 const App = () => {
-  console.log("Page render");
   const [menu, setMenu] = useState(data);
   const [categories, setCategories] = useState(new Set());
   useEffect(() => {
