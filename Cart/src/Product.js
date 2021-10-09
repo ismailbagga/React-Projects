@@ -1,14 +1,13 @@
-import React from "react";
-import { useState, useEffect } from "react/cjs/react.development";
+import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "./Context";
 const Product = ({ data }) => {
   const { id, amount, title, img, price } = data;
   const { changeAmount } = useGlobalContext();
+  console.log(amount);
   const [value, setValue] = useState(amount);
   useEffect(() => {
     changeAmount(id, value);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value]);
+  }, [value, id]);
   return (
     <div className="Single-Product">
       <img src={img} alt="phone" />
