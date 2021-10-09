@@ -17,10 +17,11 @@ const App = () => {
       return prev + 1;
     });
   };
-  if (loading) return <h1>Loading ...</h1>;
+  if (loading) return <div className="loading"></div>;
   return (
     <section className="container">
       <h1 className="text-header">GitHub I Follow</h1>
+
       <div className="Account-container">
         {data[page].map((account) => {
           return <Account key={account.id} {...account} />;

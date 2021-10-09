@@ -114,7 +114,24 @@ button {
 .btn:hover {
   background-color: var(--hover-color);
 }
+.loading {
+  height: 150px;
+  width: 150px;
+  border: 5px solid rgb(204, 0, 255);
+  border-top-color: rgb(43, 4, 53);
+  transition: all 1s linear;
+  position: absolute;
+  top: 30%;
+  left: 45%;
 
+  animation: rotate 1s infinite;
+  border-radius: 50%;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .flex-direct-row {
   display: flex;
   flex-direction: row;
