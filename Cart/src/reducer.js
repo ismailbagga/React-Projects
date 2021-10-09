@@ -48,7 +48,6 @@ const reducer = (state, action) => {
       total: state.total - amount * price,
     };
   } else if (action.type === "clearTheCart") {
-    console.log("clear the cart ");
     return { ...state, data: [], total: 0, itemsCount: 0 };
   }
   return state;

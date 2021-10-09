@@ -25,7 +25,6 @@ const Product = ({ data }) => {
           value={amount}
           onChange={(e) => {
             const value = e.target.value;
-            console.log(parseInt(value));
             if (!isNaN(parseInt(value))) changeAmount(id, e.target.value);
           }}
         />
