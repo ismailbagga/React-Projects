@@ -1,0 +1,131 @@
+:root {
+  --background-color-main-page: rgb(194, 194, 194);
+  --background-color-main-item: rgb(255, 255, 255);
+  --background-color-main-white: rgb(233, 233, 233);
+  --shadow-color: rgb(88, 88, 88);
+  --header-color: rgb(108, 226, 247);
+  --header-color-dark: rgb(34, 34, 141);
+  --grey-blue: #102a42;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code";
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(223, 223, 223);
+}
+p {
+  width: 400px;
+  background: linear-gradient(to right, black, var(--header-color-dark));
+  background-clip: text;
+  color: transparent;
+}
+.flex-direct-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.text-header {
+  position: relative;
+  color: var(--grey-blue);
+  font-size: 2rem;
+  margin-top: 10px;
+  text-align: center;
+
+  width: 180px;
+}
+.text-header::before {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 5px;
+  transform: rotate(20deg);
+  background-color: var(--grey-blue);
+  position: absolute;
+}
+.Persone-container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 80vw;
+  max-width: 800px;
+  height: 400px;
+  text-align: center;
+  transition: 1s linear;
+  transition-property: opacity transform;
+
+  /* background-color: yellowgreen; */
+}
+.currentItem {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.lastItem {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.nextItem {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.Persone-container img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.Persone-container h1 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: var(--grey-blue);
+}
+.Persone-container h2 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: var(--header-color);
+}
+.Persone-container p {
+  line-height: 30px;
+}
+.Arrows-container {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  width: 80vw;
+  max-width: 600px;
+  justify-content: space-between;
+}
+i {
+  position: relative;
+  font-size: 32px;
+  z-index: 2;
+  color: rgb(0, 0, 0);
+}
+
+.peoples-container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  height: 500px;
+  width: 80vw;
+  overflow: hidden;
+
+  max-width: 800px;
+}
+/* .Persone-container:nth-child(1) {
+  opacity: 1;
+  left: 0px;
+  right: 0px;
+} */

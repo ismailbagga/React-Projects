@@ -1,0 +1,86 @@
+:root {
+  --background-color-main-page: rgb(194, 194, 194);
+  --background-color-main-item: rgb(255, 255, 255);
+  --shadow-color: rgb(88, 88, 88);
+  --header-color: rgb(108, 226, 247);
+  --header-color-dark: rgb(34, 34, 141);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code";
+}
+body {
+  background-color: var(--background-color-main-page);
+}
+.flex-direct-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: 80px; */
+  font-size: 28px;
+  margin: 25px auto;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px 0 50px 30px;
+  background-color: white;
+  color: var(--header-color-dark);
+  border-radius: 5px;
+  width: 85vw;
+  margin: 70px auto;
+}
+.text-header {
+  color: var(--header-color-dark);
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.Question-container {
+  border: 1px solid black;
+  margin-top: 20px;
+  width: 80%;
+  padding-left: 20px;
+  box-shadow: 10px 5px 20px var(--shadow-color);
+  transition: all 1s;
+}
+.Question-container h1 {
+  font-size: 18px;
+  flex-basis: 70%;
+}
+.Question-container i {
+  flex-basis: 30%;
+  text-align: center;
+  color: rgb(88, 88, 88);
+}
+.Question-container p {
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 900px) {
+  .container {
+    flex-direction: row;
+  }
+  .Question-container {
+    width: 500px;
+
+    align-self: flex-end;
+  }
+  .text-header {
+    flex-basis: 40%;
+    font-weight: bolder;
+    /* padding-right: 10px; */
+  }
+  .Questions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5vw;
+    flex-basis: 60%;
+  }
+}
