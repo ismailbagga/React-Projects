@@ -3,6 +3,7 @@ import reducer from "./reducer";
 const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const changeAmount = (id, amount) => {
+    console.log(amount, id);
     dispatch({ type: "changeAmount", payload: { id: id, amount: amount } });
   };
   const clearTheCart = () => {
