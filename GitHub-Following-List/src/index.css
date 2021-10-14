@@ -189,6 +189,7 @@ button {
   border-radius: 8px;
   padding: 5px;
   color: white;
+  text-align:center ;
   background-color: var(--clr-primary-5);
 }
 .pages-num {
